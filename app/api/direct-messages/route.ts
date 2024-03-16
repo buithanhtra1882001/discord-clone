@@ -6,6 +6,9 @@ import { db } from "@/lib/db";
 
 const MESSAGES_BATCH = 10;
 
+// Fix DynamicServerError deploy vercel
+export const dynamic = "force-dynamic";
+
 export async function GET(req: Request) {
   try {
     const profile = currentProfile();
